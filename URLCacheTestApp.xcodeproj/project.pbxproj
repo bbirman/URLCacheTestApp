@@ -14,6 +14,8 @@
 		698BA96C22C151D700582190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698BA96A22C151D700582190 /* LaunchScreen.storyboard */; };
 		698BA96F22C151D700582190 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 698BA96E22C151D700582190 /* main.m */; };
 		698BA97922C151D800582190 /* URLCacheTestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 698BA97822C151D800582190 /* URLCacheTestAppTests.m */; };
+		69B4EB6C22C2CB8A00EF6C6B /* SalesforceSDKCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B4EB5C22C2CB1D00EF6C6B /* SalesforceSDKCore.framework */; };
+		69B4EB6D22C2CB8A00EF6C6B /* SalesforceSDKCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69B4EB5C22C2CB1D00EF6C6B /* SalesforceSDKCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +26,56 @@
 			remoteGlobalIDString = 698BA95B22C151D100582190;
 			remoteInfo = URLCacheTestApp;
 		};
+		69B4EB5B22C2CB1D00EF6C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE4CE26B1C0E449C009F6029;
+			remoteInfo = SalesforceSDKCore;
+		};
+		69B4EB5D22C2CB1D00EF6C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82D4642419C7C8170006BDFE;
+			remoteInfo = SalesforceSDKCoreTestApp;
+		};
+		69B4EB5F22C2CB1D00EF6C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F7EB4151BFFC88200768720;
+			remoteInfo = SalesforceSDKCoreTests;
+		};
+		69B4EB6122C2CB1D00EF6C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CEA8825F1C18F722008D871B;
+			remoteInfo = SalesforceSDKCoreStatic;
+		};
+		69B4EB6E22C2CB8A00EF6C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CE4CE26A1C0E449C009F6029;
+			remoteInfo = SalesforceSDKCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69B4EB7022C2CB8B00EF6C6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				69B4EB6D22C2CB8A00EF6C6B /* SalesforceSDKCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		698BA95C22C151D100582190 /* URLCacheTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLCacheTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +91,8 @@
 		698BA97422C151D800582190 /* URLCacheTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URLCacheTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		698BA97822C151D800582190 /* URLCacheTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLCacheTestAppTests.m; sourceTree = "<group>"; };
 		698BA97A22C151D800582190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SalesforceSDKCore.xcodeproj; path = "SalesforceMobileSDK-iOS/libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		69B4EB6422C2CB3900EF6C6B /* SalesforceSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SalesforceSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B4EB6C22C2CB8A00EF6C6B /* SalesforceSDKCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +120,7 @@
 				698BA95E22C151D100582190 /* URLCacheTestApp */,
 				698BA97722C151D800582190 /* URLCacheTestAppTests */,
 				698BA95D22C151D100582190 /* Products */,
+				69B4EB6322C2CB3900EF6C6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +145,7 @@
 				698BA96A22C151D700582190 /* LaunchScreen.storyboard */,
 				698BA96D22C151D700582190 /* Info.plist */,
 				698BA96E22C151D700582190 /* main.m */,
+				69B4EB3F22C2CAAB00EF6C6B /* Frameworks */,
 			);
 			path = URLCacheTestApp;
 			sourceTree = "<group>";
@@ -103,6 +159,33 @@
 			path = URLCacheTestAppTests;
 			sourceTree = "<group>";
 		};
+		69B4EB3F22C2CAAB00EF6C6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		69B4EB5122C2CB1D00EF6C6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69B4EB5C22C2CB1D00EF6C6B /* SalesforceSDKCore.framework */,
+				69B4EB5E22C2CB1D00EF6C6B /* SalesforceSDKCoreTestApp.app */,
+				69B4EB6022C2CB1D00EF6C6B /* SalesforceSDKCoreTests.xctest */,
+				69B4EB6222C2CB1D00EF6C6B /* libSalesforceSDKCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69B4EB6322C2CB3900EF6C6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B4EB6422C2CB3900EF6C6B /* SalesforceSDKCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,10 +196,12 @@
 				698BA95822C151D100582190 /* Sources */,
 				698BA95922C151D100582190 /* Frameworks */,
 				698BA95A22C151D100582190 /* Resources */,
+				69B4EB7022C2CB8B00EF6C6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69B4EB6F22C2CB8A00EF6C6B /* PBXTargetDependency */,
 			);
 			name = URLCacheTestApp;
 			productName = URLCacheTestApp;
@@ -170,6 +255,12 @@
 			mainGroup = 698BA95322C151D100582190;
 			productRefGroup = 698BA95D22C151D100582190 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 69B4EB5122C2CB1D00EF6C6B /* Products */;
+					ProjectRef = 69B4EB5022C2CB1D00EF6C6B /* SalesforceSDKCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				698BA95B22C151D100582190 /* URLCacheTestApp */,
@@ -177,6 +268,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		69B4EB5C22C2CB1D00EF6C6B /* SalesforceSDKCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SalesforceSDKCore.framework;
+			remoteRef = 69B4EB5B22C2CB1D00EF6C6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		69B4EB5E22C2CB1D00EF6C6B /* SalesforceSDKCoreTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SalesforceSDKCoreTestApp.app;
+			remoteRef = 69B4EB5D22C2CB1D00EF6C6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		69B4EB6022C2CB1D00EF6C6B /* SalesforceSDKCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SalesforceSDKCoreTests.xctest;
+			remoteRef = 69B4EB5F22C2CB1D00EF6C6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		69B4EB6222C2CB1D00EF6C6B /* libSalesforceSDKCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSalesforceSDKCore.a;
+			remoteRef = 69B4EB6122C2CB1D00EF6C6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		698BA95A22C151D100582190 /* Resources */ = {
@@ -224,6 +346,11 @@
 			isa = PBXTargetDependency;
 			target = 698BA95B22C151D100582190 /* URLCacheTestApp */;
 			targetProxy = 698BA97522C151D800582190 /* PBXContainerItemProxy */;
+		};
+		69B4EB6F22C2CB8A00EF6C6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SalesforceSDKCore;
+			targetProxy = 69B4EB6E22C2CB8A00EF6C6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
