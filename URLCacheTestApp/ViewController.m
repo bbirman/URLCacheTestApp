@@ -22,9 +22,9 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         _encryptedCache = [[SFSDKEncryptedURLCache alloc] init];
-        _url = [[NSURL alloc] initWithString:@"https://webcache.googleusercontent.com/search?q=cache:drlf2DnmSH8J:https://www.salesforce.com/+&cd=1&hl=en&ct=clnk&gl=us"];
+        //_url = [[NSURL alloc] initWithString:@"https://webcache.googleusercontent.com/search?q=cache:drlf2DnmSH8J:https://www.salesforce.com/+&cd=1&hl=en&ct=clnk&gl=us"];
         //_url = [[NSURL alloc] initWithString:@"https://developer.apple.com/documentation/uikit/uiviewcontroller/1621359-initwithnibname?language=objc"];//
-        //_url = [[NSURL alloc] initWithString:@"https://c1.sfdcstatic.com/content/dam/web/en_us/www/images/home/recommended-for-you-moar.png"];
+        _url = [[NSURL alloc] initWithString:@"https://c1.sfdcstatic.com/content/dam/web/en_us/www/images/home/recommended-for-you-moar.png"];
     }
     return self;
 }
@@ -34,25 +34,25 @@
     
     NSLog(@"BB path %@", [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]);
     
-    UIButton *noCacheButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 100, 200, 40)];
+    UIButton *noCacheButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 100, 300, 40)];
     [noCacheButton addTarget:self action:@selector(noCacheButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [noCacheButton setTitle:@"No cache load" forState:UIControlStateNormal];
     noCacheButton.backgroundColor = [UIColor blueColor];
     [self.view addSubview:noCacheButton];
     
-    UIButton *cacheButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 200, 200, 40)];
+    UIButton *cacheButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 200, 300, 40)];
     [cacheButton addTarget:self action:@selector(cacheButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [cacheButton setTitle:@"Cache load" forState:UIControlStateNormal];
     cacheButton.backgroundColor = [UIColor greenColor];
     [self.view addSubview:cacheButton];
     
-    UIButton *removeSingleResponseButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 300, 200, 40)];
+    UIButton *removeSingleResponseButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 300, 300, 40)];
     [removeSingleResponseButton addTarget:self action:@selector(removeSingleResponseButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [removeSingleResponseButton setTitle:@"Remove last response" forState:UIControlStateNormal];
     removeSingleResponseButton.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:removeSingleResponseButton];
+    //[self.view addSubview:removeSingleResponseButton];
     
-    UIButton *removeAllResponsesButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 400, 200, 40)];
+    UIButton *removeAllResponsesButton = [[UIButton alloc] initWithFrame:CGRectMake(25, 300, 300, 40)];
     [removeAllResponsesButton addTarget:self action:@selector(removeAllResponsesButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [removeAllResponsesButton setTitle:@"Remove all responses" forState:UIControlStateNormal];
     removeAllResponsesButton.backgroundColor = [UIColor redColor];
@@ -108,7 +108,7 @@
 
 - (void)removeSingleResponseButtonTapped {
     //todo
-    [[NSURLSession sharedSession].configuration.URLCache removeCachedResponseForRequest:<#(nonnull NSURLRequest *)#>];
+    //[[NSURLSession sharedSession].configuration.URLCache removeCachedResponseForRequest:<#(nonnull NSURLRequest *)#>];
 }
 
 - (void)removeAllResponsesButtonTapped {
